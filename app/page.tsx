@@ -262,8 +262,8 @@ export default function HomePage() {
       </section>
 
       {cartOpen && (
-        <div className="fixed inset-0 z-50 bg-slate-950/40">
-          <aside className="ml-auto flex h-full w-full max-w-md flex-col bg-white shadow-xl">
+        <div onClick={() => setCartOpen(false)} className="fixed inset-0 z-50 bg-slate-950/40">
+          <aside onClick={(e) => e.stopPropagation()} className="ml-auto flex h-full w-full max-w-md flex-col bg-white shadow-xl">
             <div className="flex items-center justify-between border-b border-slate-200 px-5 py-4">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-rose-500">Keranjang</p>
@@ -313,7 +313,7 @@ export default function HomePage() {
                 <span>Total</span>
                 <span>{formatRupiah.format(cartTotal)}</span>
               </div>
-              <a href="/cart" className={`block rounded-md px-4 py-3 text-center text-sm font-semibold text-white ${cart.length === 0 ? "pointer-events-none bg-slate-300" : "bg-slate-950 hover:bg-slate-700"}`}>Lihat Keranjang</a>
+              <a href="/cart" className={`block rounded-md px-4 py-3 text-center text-sm font-semibold text-white ${cart.length === 0 ? "pointer-events-none bg-slate-300" : "bg-slate-950 hover:bg-slate-700"}`}>Checkout Keranjang</a>
             </div>
           </aside>
         </div>
@@ -321,6 +321,7 @@ export default function HomePage() {
     </main>
   );
 }
+
 
 
 
