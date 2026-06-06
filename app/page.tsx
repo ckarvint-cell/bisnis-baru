@@ -313,7 +313,7 @@ export default function HomePage() {
                 <span>Total</span>
                 <span>{formatRupiah.format(cartTotal)}</span>
               </div>
-              <a href="/cart" className={`block rounded-md px-4 py-3 text-center text-sm font-semibold text-white ${cart.length === 0 ? "pointer-events-none bg-slate-300" : "bg-slate-950 hover:bg-slate-700"}`}>Checkout Keranjang</a>
+              <a href="/cart" className={`block rounded-md px-4 py-3 text-center text-sm font-semibold text-white ${cart.length === 0 ? "pointer-events-none bg-slate-300" : "bg-slate-950 hover:bg-slate-700"}`}>Lihat Keranjang</a>
             </div>
           </aside>
         </div>
@@ -321,5 +321,6 @@ export default function HomePage() {
     </main>
   );
 }
+
 
 
