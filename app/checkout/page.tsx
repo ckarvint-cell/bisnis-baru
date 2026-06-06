@@ -14,7 +14,7 @@ type CartItem = {
 };
 
 const CART_KEY = "tokoku_cart";
-const PROOF_BUCKET = "payment-proofs";
+const PROOF_BUCKET = "Bukti Transfer";
 
 const formatRupiah = new Intl.NumberFormat("id-ID", {
   style: "currency",
